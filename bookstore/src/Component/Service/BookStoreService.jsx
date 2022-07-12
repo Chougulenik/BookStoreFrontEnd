@@ -12,6 +12,11 @@ class BookStoreService {
         return axios.post(BOOK_STORE_API+'/login', userLogin);
     }
 
+    getBooks() {
+        return axios.get(BOOK_STORE_API+'/booksList');
+    }
+    
+
     
 }
 

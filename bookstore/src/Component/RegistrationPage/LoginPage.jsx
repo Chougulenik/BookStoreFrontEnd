@@ -26,8 +26,8 @@ export const BookStroeRegistration = () => {
         setUserLogin({...userLogin, [name]:value});
     }
 
-    const loginUser = () => {
-        BookStoreService.loginUser(userLogin).then((response) => {
+    const loginUser = (data) => {
+        BookStoreService.loginUser(data).then((response) => {
           console.log(response.data);
         }).catch(error => {
           console.log(error);
@@ -35,17 +35,10 @@ export const BookStroeRegistration = () => {
     }
 
   return (
-    <div className='card'> 
-    <Card sx={{ minWidth: 50 }}>
+    <div > 
+    <Card sx={{ minWidth: 800 }}>
     
-    {/* <Box
-        component="form"
-        sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-        }}
-        noValidate
-        autoComplete="off"
-      > */}
+   
       <div className='content'>
       <div className='content-box'>
       <TextField sx={{ width: 300 }} id="filled-basic" label="EmailID" variant="filled"  name="emailId"
@@ -56,7 +49,7 @@ export const BookStroeRegistration = () => {
        value={userLogin.password} onChange={handleInput} />
       </div>
       <div className='button'>
-      <Button sx={{ width: 150 }} variant="contained" color="success" onClick={() =>loginUser()}>Sign In</Button>
+      <Button sx={{ width: 150 }} variant="contained" color="success" onClick={(e) =>loginUser(e)}>Sign In</Button>
       <div>
           <Link href='/'>Sign Up</Link>
       </div>
@@ -64,7 +57,7 @@ export const BookStroeRegistration = () => {
       
       </div>
     
-    {/* </Box> */}
+   
     </div>
    
   </Card></div>

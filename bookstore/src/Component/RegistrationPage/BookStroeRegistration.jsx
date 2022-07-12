@@ -34,16 +34,9 @@ export const BookStroeRegistration = () => {
   }
 
   return (
-    <div className='card'> <Card sx={{ minWidth: 50 }}>
+    <div> 
+    <Card sx={{ minWidth: 600}}>
     
-    {/* <Box
-        component="form"
-        sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-        }}
-        noValidate
-        autoComplete="off"
-      > */}
       <div className='content'>
      <div className='content-box'>
       <TextField sx={{ width: 300 }} id="filled-basic" label="Name" variant="filled" onChange={handleInput} value={userRegistration.name} name="name" />
@@ -64,7 +57,7 @@ export const BookStroeRegistration = () => {
       </div>
       </div>
     
-    {/* </Box> */}
+   
     </div>
    
   </Card></div>
